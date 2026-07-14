@@ -1,3 +1,5 @@
+<img width="1292" height="757" alt="Splash BoilerPlate_Navigator_Night" src="https://github.com/user-attachments/assets/b54a20cc-67db-4225-a146-5c7122be9f81" />
+![Uploading Splash BoilerPlate_Navigator_Night.png…]()
 README
 # ESP32-P4 LVGL v9 UI Boilerplate — Cyberpunk Nexus Theme
 
@@ -124,8 +126,12 @@ Runtime:
 
 https://github.com/RTechAI/ForgeUI-One
 
+<<<<<<< HEAD
 Author:
 
 Scott Forster
 
 📧 forgeui.esp32@gmail.com
+=======
+*Building the next generation of open-source embedded UI tools for ESP32-P4.*
+>>>>>>> 6fd086b7c1f04a55c847f4888d51fba3ad411108

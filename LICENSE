@@ -57,6 +57,23 @@ You may NOT:
 - Misrepresent upstream third-party components
   as ForgeUI-owned technology
 
+============================================================
+COMMERCIAL USE
+============================================================
+
+Commercial use of ForgeUI-generated firmware and applications
+is permitted.
+
+You may:
+
+- Manufacture products using ForgeUI
+- Sell products built using ForgeUI
+- Deploy ForgeUI inside commercial products
+- Modify ForgeUI for your own products
+- Keep your application code closed source
+
+You may not redistribute ForgeUI itself as a competing
+development framework, template, starter kit, or toolkit.
 
 ============================================================
 THIRD-PARTY COMPONENTS

@@ -1,233 +1,129 @@
-# ForgeUI One
+# ForgeUI One Boiler Plate
 
-Hardware-proven LVGL v9 runtime baseline for ESP32-P4 hardware.
+**Hardware-proven single-page LVGL boiler plate for ESP32-P4 touchscreen projects.**
 
-ForgeUI One provides a clean, modular, reusable embedded UI foundation for developers building real ESP32-P4 touchscreen products using LVGL and ESP-IDF.
+Built using **ESP32-P4 UI Studio**, this project provides a complete firmware baseline ready to build, flash, modify, and extend for real embedded products.
 
-Current validated target hardware:
+Current validated hardware:
 
-- Waveshare ESP32-P4-WIFI6-Touch-LCD-7B
-
----
-
-# Overview
-
-ForgeUI One removes much of the painful low-level ESP32-P4 bring-up stage by already integrating:
-
-- EK79007 MIPI-DSI display support
-- GT911 capacitive touch support
-- ESP-Hosted WiFi
-- ESP32-C6 remote WiFi transport
-- DS3231 RTC integration
-- SD card support
-- LVGL v9 runtime
-- modular UI architecture
-- keyboard overlays
-- configurable feature system
-- clean ownership boundaries
-- reusable runtime structure
-
-The goal is simple:
-
-```text
-boot fast
-stay stable
-stay readable
-provide a reusable embedded foundation
-```
+- Waveshare ESP32-P4-WIFI6-Touch-LCD-7B (1024×600)
+- ESP-IDF v5.5.x
+- LVGL v9
 
 ---
 
-# Design Philosophy
+# About This Boiler Plate
 
-ForgeUI One intentionally avoids demo-driven runtime architecture and instead focuses on:
+This repository is one of the official **ForgeUI One Boiler Plates**.
 
-- stable hardware bring-up
-- clean module ownership
-- reusable embedded UI patterns
-- safe LVGL runtime rules
-- maintainable firmware architecture
-- readable project structure
-- real-world ESP32-P4 integration
+Each boiler plate contains:
 
-ForgeUI One favors:
+- Complete ESP-IDF project
+- Production-ready ForgeUI One runtime
+- Professionally designed single-page HMI
+- Hardware-proven firmware
+- Clean starting point for your own applications
 
-- clarity
-- stability
-- maintainability
-- reusable architecture
-- hardware-proven workflows
-- readable embedded structure
+Simply clone, build, flash, customise, and create your own embedded product.
 
 ---
 
-# Core Architecture Rules
+# Built With ESP32-P4 UI Studio
 
-- `main.c` owns boot order only
-- backends own system truth
-- UI renders state only
-- no unsafe async LVGL calls
-- modular compile-time feature control
-- no hidden subsystem ownership
-- no demo-driven runtime coupling
-- safe backend/UI separation
+This project was designed and exported using **ESP32-P4 UI Studio**.
 
-These rules exist to maintain long-term runtime stability and prevent hidden ownership conflicts between UI and hardware systems.
+ESP32-P4 UI Studio is an open-source visual development environment for creating modern embedded interfaces without starting from a blank project.
 
----
+Features include:
 
-# Current Proven Features
+- Visual UI Designer
+- AI-assisted UI generation
+- AI Hero Theme generation
+- Theme Manager
+- Asset Manager
+- Icon Browser
+- LVGL code generation
+- Standalone ESP-IDF project export
+- Physical ESP32-P4 deployment
 
-Current proven ForgeUI One baseline includes:
-
-- display operational
-- touch operational
-- LVGL v9 operational
-- hosted WiFi operational
-- WiFi scan/connect/disconnect
-- RTC persistence
-- DS3231 RTC integration
-- audio subsystem support
-- SD card support
-- keyboard overlay system
-- modular UI foundation
-- theme foundation
-- status drawer architecture
-- single-page UI baseline
-- modular multi-page UI baseline
-
----
-
-# Runtime Role Inside ESP32-P4 UI Studio
-
-ForgeUI One now operates as the firmware/runtime layer inside the larger:
+Development Pipeline:
 
 ```text
 ESP32-P4 UI Studio
+        │
+        ▼
+Visual Design
+        │
+        ▼
+AI Assisted Design
+        │
+        ▼
+ForgeUI One Runtime
+        │
+        ▼
+ESP-IDF Build
+        │
+        ▼
+Physical ESP32-P4 Hardware
 ```
-
-toolchain ecosystem.
-
-Architecturally:
-
-```text
-Studio
-→ generates LVGL artifacts
-
-ForgeUI One
-→ compiles and executes LVGL artifacts
-
-ESP32-P4 hardware
-→ renders the live interface
-```
-
-ForgeUI One intentionally owns:
-
-- ESP-IDF project structure
-- LVGL runtime lifecycle
-- BSP integration
-- display/touch/audio setup
-- runtime application shell
-- generated UI insertion points
-
-The visual editor and deployment tooling remain intentionally separated from the embedded runtime.
 
 ---
 
-# Target Use Cases
+# About ForgeUI One
 
-ForgeUI One is designed as a clean starting point for:
+ForgeUI One is the embedded runtime that powers every exported project from ESP32-P4 UI Studio.
 
-- embedded products
-- ESP32-P4 experimentation
-- LVGL projects
-- touchscreen appliances
-- dashboards
-- games
-- kiosk systems
-- hardware prototypes
-- commercial firmware platforms
-- product development platforms
-- embedded HMI systems
+It provides:
+
+- Hardware initialization
+- LVGL runtime management
+- Display driver integration
+- GT911 touch support
+- ESP-Hosted WiFi
+- RTC support
+- SD Card support
+- Audio subsystem support
+- Theme system
+- Modular runtime architecture
+- Studio export integration
+
+The generated UI is automatically inserted into the runtime and rendered directly on physical ESP32-P4 hardware.
 
 ---
 
-# Software Stack
+# Why ForgeUI One?
 
-Built using:
+Rather than beginning with a blank ESP-IDF project, ForgeUI One provides a stable, reusable, hardware-proven foundation allowing developers to focus on creating applications instead of configuring low-level hardware.
 
-- ESP-IDF v5.5.x
-- LVGL v9
-- ESP-Hosted
-- esp_wifi_remote
-- Waveshare BSP ecosystem
-- Espressif managed components
+Every ForgeUI One Boiler Plate includes:
+
+- Hardware-proven firmware
+- Clean architecture
+- Modular project structure
+- Stable runtime
+- Reusable components
+- Single-page HMI ready for customisation
 
 ---
 
 # Hardware Support
 
-Current proven hardware support includes:
+Validated on:
 
+- Waveshare ESP32-P4-WIFI6-Touch-LCD-7B
 - ESP32-P4
+- EK79007 MIPI-DSI Display
+- GT911 Capacitive Touch
 - ESP32-C6 Hosted WiFi
-- EK79007 display controller
-- GT911 touch controller
 - DS3231 RTC
-- SD card support
-- audio subsystem support
-
----
-
-# Project Structure
-
-Current runtime structure:
-
-```text
-ForgeUI-One/
-├── main/
-├── managed_components/
-├── CMakeLists.txt
-├── sdkconfig
-└── README.md
-```
-
-Important runtime files include:
-
-```text
-main/01_FG_HMI.c
-main/02_UI_Home.c
-main/14_UI_Header.c
-main/90_Studio_Export.c
-main/90_Studio_Export.h
-```
-
----
-
-# ESP32-P4 UI Studio Integration
-
-ForgeUI One supports direct export integration from:
-
-```text
-ESP32-P4 UI Studio
-```
-
-Generated UI files are automatically injected into:
-
-```text
-main/90_Studio_Export.c
-main/90_Studio_Export.h
-```
-
-The runtime then compiles and renders the generated LVGL interface directly on hardware.
-
-This workflow has now been physically validated on real ESP32-P4 hardware.
+- SD Card
+- Audio subsystem
 
 ---
 
 # Quick Start
 
-Set target:
+Set the target:
 
 ```bash
 idf.py set-target esp32p4
@@ -249,47 +145,72 @@ idf.py flash monitor
 
 # Current Status
 
-Status:
-
 ```text
-ALIVE / ACTIVE DEVELOPMENT
+✔ PHYSICAL HARDWARE PROVEN
+
+✔ ACTIVE DEVELOPMENT
+
+✔ ESP32-P4 UI STUDIO COMPATIBLE
+
+✔ FORGEUI ONE RUNTIME VERIFIED
 ```
 
-Current milestone:
+---
 
-```text
-Studio → Runtime → Hardware deployment pipeline proven
-```
+# Project Philosophy
 
-ForgeUI One now acts as the embedded execution layer for generated LVGL interfaces coming from the ESP32-P4 UI Studio workflow.
+ForgeUI is built around one simple idea:
+
+> **Create once. Export once. Flash once. Build real products.**
+
+Every boiler plate is intended to be cloned, customised, and used as the starting point for commercial products, prototypes, dashboards, HMIs, kiosks, industrial controllers, and embedded touchscreen applications.
+
+---
+
+# Designed & Created By
+
+## Scott Forster
+
+## New Zealand
+
+**Creator & Designer — ForgeUI**
+
+Creator of:
+
+- ESP32-P4 UI Studio
+- ForgeUI One Runtime
+
+📧 **forgeui.esp32@gmail.com**
+
+GitHub:
+
+https://github.com/RTechAI
+
+---
+
+# Support & Updates
+
+If you build something with ForgeUI, have suggestions for new features, discover a bug, or simply want to share your project, I'd love to hear from you.
+
+Feature requests, improvements, and community contributions are always welcome.
+
+📧 **forgeui.esp32@gmail.com**
 
 ---
 
 # License
 
-ForgeUI One includes components and dependencies licensed under their respective open-source licenses.
-
-Key integrated technologies include:
+ForgeUI One incorporates several outstanding open-source technologies including:
 
 - ESP-IDF
 - LVGL
-- Waveshare BSP components
+- Waveshare BSP Components
 
-Please review:
-
-- LICENSE
-- THIRD_PARTY_LICENSES.md
+Please refer to the accompanying **LICENSE** and **THIRD_PARTY_LICENSES.md** files for additional licensing information.
 
 ---
 
-# Developed By
+**Powered by ForgeUI**
 
-Scott Forster  
-ForgeUI Project
+*Building the next generation of open-source embedded UI tools for ESP32-P4.*
 
-📧 Contact:
-forgeui.esp32@gmail.com
-
----
-
-Powered by ForgeUI.

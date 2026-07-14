@@ -1,3 +1,4 @@
+<img width="1292" height="757" alt="Splash BoilerPlate_Navigator_Night" src="https://github.com/user-attachments/assets/b54a20cc-67db-4225-a146-5c7122be9f81" />
 ![Uploading Splash BoilerPlate_Navigator_Night.png…]()
 README
 

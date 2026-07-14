@@ -1,0 +1,11 @@
+/build/
+/managed_components/
+/sdkconfig
+/sdkconfig.old
+.vscode/
+settings/
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db

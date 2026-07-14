@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="wifi2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22D3EE;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="44" height="44" rx="8" stroke="url(#wifi2)" stroke-width="2.5" fill="white"/>
+  <path d="M8.5 18C13 13 18 11 24 11C30 11 35 13 39.5 18" stroke="url(#wifi2)" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M13 23C16 20 20 18 24 18C28 18 32 20 35 23" stroke="url(#wifi2)" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M17.5 28C19.5 26 21.5 25 24 25C26.5 25 28.5 26 30.5 28" stroke="url(#wifi2)" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="24" cy="33" r="2" fill="#06B6D4"/>
+</svg>
